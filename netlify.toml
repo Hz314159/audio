@@ -1,6 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "chmod +x node_modules/@esbuild/linux-x64/bin/esbuild && node node_modules/esbuild/install.js && npm run build"
   publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 [[redirects]]
   from = "/*"
